@@ -14,7 +14,7 @@ def get_db():
     finally:
         db.close()
 
-@router.post("/", response_model=HabitResponse)
+@router.post("/create", response_model=HabitResponse)
 def create_habit(habit: HabitCreate, db: Session = Depends(get_db)):
     db_habit = Habit(name=habit.name)
     db.add(db_habit)

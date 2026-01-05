@@ -6,7 +6,6 @@ class HabitCreate(BaseModel):
 class HabitResponse(BaseModel):
     id: int
     name: str
-    description: str | None
     is_active: bool
 
     class Config:
